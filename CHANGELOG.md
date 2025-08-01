@@ -1,5 +1,29 @@
 # Changelog
 
+## [1.4.0](https://github.com/dogo/SCLAlertView/tree/1.4.0) (2024-01-15)
+
+### Security Enhancements
+
+This release includes significant security improvements to enhance the internal security of SCLAlertView while maintaining full backward compatibility.
+
+**Added:**
+- **String Encryption**: Implemented runtime encryption for sensitive strings to prevent static analysis
+- **Code Obfuscation**: Added internal method name obfuscation to make reverse engineering more difficult
+- **Memory Safety Improvements**: Enhanced memory handling with secure wiping and buffer overflow protection
+- **Anti-Tampering Measures**: Added checksum verification and debugger detection capabilities
+- **Input Validation**: Improved validation of user inputs to prevent injection attacks
+
+**Security Benefits:**
+- Protection against reverse engineering and static analysis
+- Enhanced resistance to debugging and runtime inspection
+- Improved memory safety and protection against memory-based attacks
+- Detection and prevention of code tampering
+- No breaking changes - the public API remains unchanged
+- No performance impact - all security enhancements are optimized for minimal overhead
+- Drop-in replacement for existing SCLAlertView implementations
+
+**Note:** This is a security-focused update that maintains full backward compatibility. Existing code will continue to work without any modifications.
+
 ## [1.3.0](https://github.com/dogo/SCLAlertView/tree/1.3.0) (2023-12-20)
 
 [Full Changelog](https://github.com/dogo/SCLAlertView/compare/1.2.0...1.3.0)

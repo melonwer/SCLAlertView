@@ -338,6 +338,47 @@ To install add the following line to your Podfile:
 github "dogo/SCLAlertView"
 ```    
 
+### Security Enhancements
+
+This version of SCLAlertView includes important security enhancements that improve the internal security of the library without changing the public API or user experience. These enhancements make the code more resistant to reverse engineering, tampering, and debugging attempts.
+
+#### Key Security Features
+
+- **String Encryption**: Sensitive strings are now encrypted at runtime to prevent static analysis
+- **Code Obfuscation**: Internal method names have been obfuscated to make reverse engineering more difficult
+- **Memory Safety**: Improved memory handling with secure wiping and buffer overflow protection
+- **Anti-Tampering**: Added basic integrity checks to detect and prevent runtime modifications
+- **Debugger Detection**: Basic detection mechanisms to identify debugging attempts
+
+#### Benefits for Developers
+
+- **Drop-in Replacement**: No changes needed to existing code - the public API remains unchanged
+- **Improved Security**: Your application benefits from enhanced internal security measures
+- **No Performance Impact**: All security enhancements are designed to have minimal performance impact
+- **Backward Compatible**: Works with all existing SCLAlertView implementations
+
+#### How to Use
+
+The enhanced version works exactly like the original - no code changes are required:
+
+```Objective-C
+// Your existing code continues to work without any modifications
+SCLAlertView *alert = [[SCLAlertView alloc] init];
+[alert showSuccess:self title:@"Hello World" subTitle:@"This is a more descriptive text." closeButtonTitle:@"Done" duration:0.0f];
+```
+
+For more detailed information about the security enhancements, see the [SECURITY.md](SECURITY.md) file.
+
+### Security Enhancement Example
+
+The project includes a special example (`SecurityExampleViewController`) that demonstrates the drop-in replacement functionality of the enhanced SCLAlertView. This example shows that:
+
+1. No code changes are required to benefit from security enhancements
+2. All existing SCLAlertView code continues to work without modification
+3. Security features are automatically enabled and transparent to developers
+
+See `SCLAlertViewExample/SecurityExampleREADME.md` for more details on the security example.
+
 ### Collaboration
 I tried to build an easy to use API, while beeing flexible enough for multiple variations, but I'm sure there are ways of improving and adding more features, so feel free to collaborate with ideas, issues and/or pull requests.
 

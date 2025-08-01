@@ -1,6 +1,6 @@
 # Changelog
 
-## [1.4.0](https://github.com/dogo/SCLAlertView/tree/1.4.0) (2024-01-15)
+## [1.4.0](https://github.com/dogo/SCLAlertView/tree/1.4.0) (2025-08-02)
 
 ### Security Enhancements
 
